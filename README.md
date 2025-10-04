@@ -1,2 +1,6 @@
 # ASHLaTeX
-A thesis template for physics students in university of Tehran
+A thesis template for physics students at the University of Tehran
+When I started working on this file in my Master's, it had so many errors and bugs. I fixed them and optimized it. You can find the version details in the cls file. This is the 1.1 version. It may be updated in the future, but I wrote my PhD thesis using this template, and it should work fine.
+Each line in the files has a description, and if you want to change the files, read the captions carefully.
+Don't forget to install the wanted fonts.
+Enjoy!
