@@ -1,0 +1,74 @@
+
+%!TEX program = xelatex
+% اگر قصد نوشتن پروژه کارشناسی را دارید، در خط زیر به جای msc، کلمه bsc و اگر قصد نوشتن پروژه دکترا را دارید، کلمه phd را قرار دهید. کلیه تنظیمات لازم، به طور خودکار، اعمال می‌شود.
+
+% اگر مایلید پایان‌نامه شما دورو باشد به جای oneside  در خط زیر از twoside استفاده کنید
+\documentclass[oneside,openany,phd]{ASH-UT-Thesis}
+
+% مشخصات پایان‌نامه را در فایلهای faTitle و enTitle وارد نمایید.
+
+% فایل commands.tex را مطالعه کنید؛ چون دستورات مربوط به فراخوانی بسته زی‌پرشین و دیگر بسته‌ها و ... در این فایل قرار دارد و بهتر   است که با نحوه استفاده از آنها آشنا شوید.
+	\input{commands}
+
+\begin{document}
+	
+\numberwithin{equation}{section}
+% اعداد صفحات
+\pagenumbering{harfi}
+% صفحه عنوان. این صفحه به طور پیش فرض با قالب مورد نظر دانشکده فیزیک طراحی شده است. برای وارد کردن نام و مشخصات خود به فایل fatitle.tex مراجعه کنید.
+\input{faTitle}
+% فهرست
+\tableofcontents
+\cleardoublepage
+\newpage
+% چنانچه مایل هستید فهرست تصاویر در  فهرست قرار گیرد علامت % را بردارید.
+%\listoffigures \newpage
+% چنانچه مایل هستید فهرست جداول در فهرست قرار گیرد علامت % را بردارید.
+%\listoftables  \newpage
+%\addcontentsline{toc}{chapter}{\listalgorithmname}
+
+% فایل مربوط به نمادگذاری، چنانچه در مقاله نمادگذاری ندارید یک علامت % پشت آن بگذارید. ( برای مثال مورد استفاده، در گرانش قبل از شروع مقاله باید اعلام کنید نمادگذاری شما +++- است یا ---+)
+\input{Notations}
+\pagestyle{fancy}
+\include{Prelude}
+\include{Chapter1}
+\include{Chapter2}
+\include{Chapter3}
+%\include{Chapter4}
+%\include{Chapter5}
+%\include{Chapter6}
+%\include{Chapter7}
+%\include{Chapter8}
+% چنانچه مایل هستید فصل های بیشتری اضافه کنید، کافیست مانند بالا دستور include را اضافه کنید و نام فایل تک را در کروشه وارد کنید.
+% مراجع
+% دستوری برای تغییر نام کلمه «کتاب‌نامه» به «مراجع»
+\renewcommand{\bibname}{مراجع}
+\pagestyle{empty}
+{
+\onehalfspacing
+\bibliographystyle{unsrt-fa-custom.bst}%{chicago-fa}%{plainnat-fa}%
+\bibliography{References}
+}
+
+%\pagestyle{fancy}
+%اگر از فایل تک برای ارجاع استفاده میکنید بجای قسمت بالا از کد پایین استفاده کنید
+%\include{references}
+
+	\appendix                        
+% فصلهای پس از این قسمت به عنوان ضمیمه خواهند آمد. فرمت دانشکده فیزیک به این صورت است که پیوست پس از مراجع باید باشد، چنانچه می خواهید جای آن ها را عوض کنید جای دستورات با بالا عوض کنید.
+
+\include{appendix1}
+%\include{appendix2}
+
+\baselineskip=.75cm
+\onehalfspacing
+% چنانچه مایل هستید پایان نامه شامل واژه نامه فارسی به انگلیسی باشد علامت % را بردارید. (معمولا نیازی نیست)
+%\include{dicfa2en}
+% چنانچه مایل هستید پایان نامه شامل واژه نامه انگلیسی به فارسی باشد علامت % را بردارید. (معمولا نیازی نیست)
+%\include{dicen2fa}
+
+\printindex
+\input{enTitle}
+\label{LastPage}
+
+\end{document}
