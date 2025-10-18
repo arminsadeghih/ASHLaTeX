@@ -6,3 +6,5 @@ Don't forget to install the wanted fonts.<br><br>
 You can also download the .zip file from my webpage: [ASH LaTeX template](https://arminsadeghi.net/ASHLaTeX/ASH%20Thesis%20Template%201.1.zip),<br>
 
 Enjoy!<br>
+
+Update: 18/10/2025 v1.2 (.cls file is updated for new Esalat asar page. Also the numbering page in the first pages are fixed)
