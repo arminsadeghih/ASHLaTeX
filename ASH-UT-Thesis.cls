@@ -14,7 +14,8 @@
 %\ProvidesClass{ASH-UT-Thesis}
               [3/3/2021 v0.1
                6/12/2023 v1.0 (Some errors where resolved, added some samples in the references)
-               27/7/2025 v1.1 (Some errors where resolved, bibtex format using new and stable .bst file is now available, new command \m{} for smaller in text math instead of $$ is defined)
+               27/7/2025 v1.1 (Some errors where resolved, bibtex format using new and stable .bst file is now available, new command \m{} for smaller in text math instead of dollars is defined)
+               18/10/2025 v1.2 (.cls file is updated for new Esalat asar page. Also the numbering page in the first pages are fixed)
  Persian thesis document class in XeLaTeX for University of Tehran, Department of Physics]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions
@@ -90,7 +91,7 @@
 \newcommand{\firstPage}{\begin{titlepage}
 \topmargin=-30pt
 \vspace{-10mm}
-\centerline{{\includegraphics[width=5cm]{logo-en}}}
+\centerline{{\includegraphics[width=4.5cm]{logo-en}}}
 \par
 \vspace{-5mm}
 {\large\bfseries\@faculty}
@@ -207,31 +208,28 @@
 \newcommand{\esalatPage}{
 \newpage
 %\thispagestyle{empty}
+\topmargin=-30pt
+\vspace{-10mm}
+\centerline{{\includegraphics[width=3cm]{logo-en}}}
 \begin{center}
-{\Large \titlefont
-تأییدیه‌ی صحت و اصالت نتایج \\
- }
+بسمه تعالی \\
 \vspace{.5cm}
-باسمه تعالی 
-\vspace{.5cm}
+{\fontsize{15}{17}\selectfont
+	تعهد‌نامه‌ی اصالت اثر 
+}
 \end{center}
-\doublespacing 
-
+\doublespacing \vspace{.5cm}
+{{\fontsize{17}{19}\selectfont\nastaliq
 اینجانب 
 \@name \ \@surname \ 
-به شماره دانشجویی 
-\@studentID {}
-دانشجوی رشته 
-\@subject {}
-مقطع تحصیلی 
-\@degree {}
-تأیید می‌نمایم كه كلیه‌ی نتایج این \@projectLabel{} حاصل كار اینجانب و بدون هرگونه دخل و تصرف است و موارد نسخه‌برداری‌شده از آثار دیگران را با ذكر كامل مشخصات منبع ذكر كرده‌ام. درصورت اثبات خلاف مندرجات فوق، به تشخیص دانشگاه مطابق با ضوابط و مقررات حاكم ( قانون حمایت از حقوق مؤلفان و مصنفان و قانون ترجمه و تكثیر كتب و نشریات و آثار صوتی، ضوابط و مقررات آموزشی، پژوهشی و انضباطی ... ) با اینجانب رفتار خواهد شد و حق هرگونه اعتراض درخصوص احقاق حقوق مكتسب و تشخیص و تعیین تخلف و مجازات را از خویش سلب می‌نمایم. در ضمن، مسؤولیت هرگونه پاسخگویی به اشخاص اعم از حقیقی و حقوقی و مراجع ذی‌صلاح (اعم از اداری و قضایی) به عهده‌ی اینجانب خواهد بود و دانشگاه هیچ‌گونه مسؤولیتی در این خصوص نخواهد داشت.
-
+گواهی و تعهد می‏دهم که مطالب مندرج در این \@projectLabel{} حاصل کار پژوهشی اینجانب است و به دستاوردهای پژوهشی دیگران که در این پژوهش از آنها استفاده شده، مطابق مقررات و اصول مرتبط با درج منابع و مآخذ، ارجاع داده‏ ام. این  \@projectLabel{} قبلاً برای دریافت هیچ مدرک تحصیلی دیگری ارائه نشده است. ضمن پایبندی به رعایت مقررات و اصول اخلاق در پژوهش، می‏پذیرم که در هر زمانی، خلاف این گواهی اثبات شود، دانشگاه تهران حق دارد مدرک تحصیلی صادر‏شده را از درجه‌ی اعتبار ساقط نماید. ‌
+		\\کلیه حقوق مادی و معنوی این اثر متعلق به دانشگاه تهران است.}}
 \vspace{.5cm}
 \begin{flushleft}
 \begin{tabular}{lr}
 نام و نام خانوادگی:   & 	\@name{} \@surname \\
- تاریخ و امضا: & \\
+ تاریخ و امضا: & ‌1404/6/25\\
+ \includegraphics[width=3cm]{sign.jpg}
 \end{tabular}
 \end{flushleft}
 }
